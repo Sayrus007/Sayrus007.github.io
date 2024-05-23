@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 20px auto;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .item {
+            background-color: white;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+        .red { background: #C1172C; }
+        .item img {
+            width: 60px;
+            height: 50px;
+        }
+
+        .item p {
+            margin: 1px 0;
+        }
+
+        .buttons, .add-button {
+            display:center;
+            justify-content:center;
+        }
+
+        .buttons {
+            display: none;
+        }
+
+        button {
+            background-color: #FFA500;
+            border: 1px solid #FFA500;
+            padding: 4px 20px;
+            border-radius: 60px;
+            cursor: pointer;
+        }
+        buttonred {
+            background-color: #F42300;
+            border: 1px solid #F42300;
+            padding: 4px 20px;
+            border-radius: 60px;
+            cursor: pointer;
+        }
+        buttongreen {
+            background-color: #8CA600;
+            border: 1px solid #8CA600;
+            padding: 4px 20px;
+            border-radius: 60px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e2b33b;
+        }
+
+        .summary {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="item" data-name="Burger" data-price="4.99">
+        <img src="https://media-public.canva.com/CxWdw/MADUieCxWdw/2/tl.png" alt="Burger">
+             <p style="font-family: Arial;">Burger $4.99</p>
+            <div class="add-button">
+                <button class="add-init">ADD</button>
+            </div>
+            <div class="buttons">
+                <buttongreen class="add">+</buttongreen>
+                <buttonred class="remove">-</buttonred>
+            </div>
+        </div>
+        <div class="item" data-name="Fries" data-price="1.49">
+            <img src="https://media-public.canva.com/KlhkM/MAF63vKlhkM/1/tl.png" alt="Fries">
+            <p>Fries $1.49</p>
+            <div class="add-button">
+                <button class="add-init">ADD</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Hotdog" data-price="3.49">
+            <img src="https://media-public.canva.com/YV-6Y/MAEbuPYV-6Y/1/tl.png" alt="Hotdog">
+            <p>Hotdog $3.49</p>
+            <div class="add-button">
+                <button class="add-init">ADD</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="red" class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Taco" data-price="3.99">
+            <img src="https://media-public.canva.com/MDwgI/MAF-OiMDwgI/1/tl.png" alt="Taco">
+            <p>Taco $3.99</p>
+            <div class="add-button">
+                <button class="add-init">ADD</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Pizza" data-price="7.99">
+            <img src="https://media-public.canva.com/UPO8Q/MADVnWUPO8Q/2/tl.png" alt="Pizza">
+            <p>Pizza $7.99</p>
+            <div class="add-button">
+                <button class="add-init">ADD</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Donut" data-price="1.49">
+            <img src="https://media-public.canva.com/QtxSk/MADENyQtxSk/2/tl.png" alt="Donut">
+            <p>Donut $1.49</p>
+            <div class="add-button">
+                <button class="add-init">ADD</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Burger" data-price="4.99">
+        <img src="https://media-public.canva.com/CxWdw/MADUieCxWdw/2/tl.png" alt="Burger">
+             <p>Burger $4.99</p>
+            <div class="add-button">
+                <button class="add-init">Add</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Fries" data-price="1.49">
+            <img src="https://media-public.canva.com/KlhkM/MAF63vKlhkM/1/tl.png" alt="Fries">
+            <p>Fries $1.49</p>
+            <div class="add-button">
+                <button class="add-init">Add</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Hotdog" data-price="3.49">
+            <img src="https://media-public.canva.com/YV-6Y/MAEbuPYV-6Y/1/tl.png" alt="Hotdog">
+            <p>Hotdog $3.49</p>
+            <div class="add-button">
+                <button class="add-init">Add</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Taco" data-price="3.99">
+            <img src="https://media-public.canva.com/MDwgI/MAF-OiMDwgI/1/tl.png" alt="Taco">
+            <p>Taco $3.99</p>
+            <div class="add-button">
+                <button class="add-init">Add</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Pizza" data-price="7.99">
+            <img src="https://media-public.canva.com/UPO8Q/MADVnWUPO8Q/2/tl.png" alt="Pizza">
+            <p>Pizza $7.99</p>
+            <div class="add-button">
+                <button class="add-init">Add</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <div class="item" data-name="Donut" data-price="1.49">
+            <img src="https://media-public.canva.com/QtxSk/MADENyQtxSk/2/tl.png" alt="Donut">
+            <p>Donut $1.49</p>
+            <div class="add-button">
+                <button class="add-init">Add</button>
+            </div>
+            <div class="buttons">
+                <button class="add">+</button>
+                <button class="remove">-</button>
+            </div>
+        </div>
+    </div>
+    <div class="summary">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Cost: $<span id="total-cost">0.00</span></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let totalItems = 0;
+            let totalCost = 0.00;
+
+            const totalItemsElement = document.getElementById('total-items');
+            const totalCostElement = document.getElementById('total-cost');
+
+            document.querySelectorAll('.add-init').forEach(button => {
+                button.addEventListener('click', () => {
+                    const itemElement = button.closest('.item');
+                    
+                    const buttons = itemElement.querySelector('.buttons');
+                    button.parentElement.style.display = 'none';
+                    buttons.style.display = 'flex';
+
+                    const itemPrice = parseFloat(itemElement.getAttribute('data-price'));
+                    totalItems++;
+                    totalCost += itemPrice;
+
+                    totalItemsElement.textContent = totalItems;
+                    totalCostElement.textContent = totalCost.toFixed(2);
+                });
+            });
+
+            document.querySelectorAll('.add').forEach(button => {
+                button.addEventListener('click', () => {
+                    const itemElement = button.closest('.item');
+                    const itemPrice = parseFloat(itemElement.getAttribute('data-price'));
+
+                    totalItems++;
+                    totalCost += itemPrice;
+
+                    totalItemsElement.textContent = totalItems;
+                    totalCostElement.textContent = totalCost.toFixed(2);
+                });
+            });
+
+            document.querySelectorAll('.remove').forEach(button => {
+                button.addEventListener('click', () => {
+                    const itemElement = button.closest('.item');
+                    const itemPrice = parseFloat(itemElement.getAttribute('data-price'));
+
+                    if (totalItems > 0) {
+                        totalItems--;
+                        totalCost -= itemPrice;
+
+                        totalItemsElement.textContent = totalItems;
+                        totalCostElement.textContent = totalCost.toFixed(2);
+                    }
+
+                    if (totalItems === 0) {
+                        const addButton = itemElement.querySelector('.add-init');
+                        const buttons = itemElement.querySelector('.buttons');
+                        addButton.parentElement.style.display = 'flex';
+                        buttons.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
